@@ -6,4 +6,5 @@ final class EventTableViewCell: UITableViewCell {
     }
 
     @IBOutlet private var label: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
 }
