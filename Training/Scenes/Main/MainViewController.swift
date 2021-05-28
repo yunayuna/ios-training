@@ -1,6 +1,6 @@
 import UIKit
 
-final class MainViewController: UIViewController {
+final class MainViewController: UIViewController, UITableViewDelegate {
     struct Dependency {
         var getEventsUseCase: GetEventsUseCase = GetEventsDefaultUseCase()
     }
@@ -47,6 +47,21 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = "Events"
         fetchEvents()
+        tableView.delegate = self
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let nextVC = storyboard?.instantiateViewController(identifier: "RepositoryView")
+        nextVC?.modalPresentationStyle = .fullScreen
+        
+        // 右から左に遷移
+        let transition = CATransition()
+        transition.duration = 0.25
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromRight
+        view.window!.layer.add(transition, forKey: kCATransition)
+        
+        self.present(nextVC!, animated: false, completion: nil)
     }
 }
 
