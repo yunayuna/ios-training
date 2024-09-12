@@ -30,6 +30,8 @@
 		A764F0382648F9D800EEE731 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A764F0362648F9D800EEE731 /* EventTableViewCell.swift */; };
 		A764F0392648F9D800EEE731 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A764F0372648F9D800EEE731 /* EventTableViewCell.xib */; };
 		A7B548B02645BA4700176FE0 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B548AF2645BA4700176FE0 /* R.generated.swift */; };
+		F9D09768265BB596006A6630 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = F9D09767265BB596006A6630 /* Nuke */; };
+		F9F04035265F659D0019A652 /* RepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F04034265F659D0019A652 /* RepositoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,7 @@
 		A764F0372648F9D800EEE731 /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
 		A7B548AF2645BA4700176FE0 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		C94CCBDFED768A11714B12D7 /* Pods-Training-TrainingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Training-TrainingUITests.debug.xcconfig"; path = "Target Support Files/Pods-Training-TrainingUITests/Pods-Training-TrainingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F9F04034265F659D0019A652 /* RepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewController.swift; sourceTree = "<group>"; };
 		FFE0A3B1ACF5DD2D82584E45 /* Pods_TrainingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -91,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9D09768265BB596006A6630 /* Nuke in Frameworks */,
 				0B89F13F34F75F434BF51D3D /* Pods_Training.framework in Frameworks */,
 				A764F0252648D79B00EEE731 /* Alamofire in Frameworks */,
 			);
@@ -204,6 +208,7 @@
 		A764F01F2648D65800EEE731 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				F9F04034265F659D0019A652 /* RepositoryViewController.swift */,
 				A72D03E3264582E600DA791D /* MainViewController.swift */,
 				A72D04112645878500DA791D /* Main.storyboard */,
 				A764F0202648D66A00EEE731 /* Subviews */,
@@ -312,6 +317,7 @@
 			name = Training;
 			packageProductDependencies = (
 				A764F0242648D79B00EEE731 /* Alamofire */,
+				F9D09767265BB596006A6630 /* Nuke */,
 			);
 			productName = Training;
 			productReference = A72D03DC264582E600DA791D /* Training.app */;
@@ -389,6 +395,7 @@
 			mainGroup = A72D03D3264582E600DA791D;
 			packageReferences = (
 				A764F0232648D79B00EEE731 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				F9D09766265BB596006A6630 /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			productRefGroup = A72D03DD264582E600DA791D /* Products */;
 			projectDirPath = "";
@@ -568,6 +575,7 @@
 				A72D03E2264582E600DA791D /* SceneDelegate.swift in Sources */,
 				A7B548B02645BA4700176FE0 /* R.generated.swift in Sources */,
 				A764F0272648E0DD00EEE731 /* Event.swift in Sources */,
+				F9F04035265F659D0019A652 /* RepositoryViewController.swift in Sources */,
 				6FD1315EF996C0D92C68E0A0 /* NetworkLogger.swift in Sources */,
 				A764F0352648F01800EEE731 /* GetEventsRequest.swift in Sources */,
 				6FD132065B0D8C35CD593AB0 /* GetEventsUseCase.swift in Sources */,
@@ -896,6 +904,14 @@
 				minimumVersion = 5.4.3;
 			};
 		};
+		F9D09766265BB596006A6630 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.6.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -903,6 +919,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A764F0232648D79B00EEE731 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		F9D09767265BB596006A6630 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9D09766265BB596006A6630 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
